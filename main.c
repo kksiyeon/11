@@ -1,24 +1,22 @@
 #include <stdio.h>
 
 int main(void) {
-    int i;
-    int grade[5];
-    int *ptr=grade;
-    int sum=0;
+    char *pc;
+    int *pi;
+    double *pd;
 
-    for(i=0;i<5;i++)
-    {
-        printf("grade[%i]=", i);
-        scanf("%d", &grade[i]);
+    pc=(char*)10000;
+    pi=(int*)10000;
+    pd=(double*)10000;
 
-    }
+    printf("증가 전: pc=%d, pi=%d,pd=%d\n",pc,pi,pd);
 
-    for(i=0;i<5;i++)
-    {
-        printf("grade[%i]=%d\n", i, *(ptr+i));
-        sum=sum+*(ptr+i);
-    }
-    printf("\naverage: %d\n", sum/5);
+    pc++;
+    pi++;
+    pd++;
+    printf("증가 후: pc=%d, pi=%d, pd=%d\n",pc,pi,pd);
+
     return 0;
+
 }
 
